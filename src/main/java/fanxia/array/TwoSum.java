@@ -2,6 +2,8 @@ package fanxia.array;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class TwoSum {
 	private class Pair {
@@ -32,7 +34,7 @@ public class TwoSum {
 		}
 	}
 
-	public int[] twoSum(int[] numbers, int target) {
+	public int[] twoSum1(int[] numbers, int target) {
 		int[] ret = new int[2];
 		Pair[] pairs = new Pair[numbers.length];
 		for (int i = 0; i < numbers.length; i++) {
@@ -56,6 +58,23 @@ public class TwoSum {
 					ret[1] = pairs[i].idx;
 				}
 				break;
+			}
+		}
+		return ret;
+	}
+
+	public int[] twoSum(int[] numbers, int target) {
+		int[] ret = new int[2];
+		HashMap<Integer, Integer> visited = new HashMap<Integer, Integer>();
+		for (int i = 0; i < numbers.length; i++) {
+			int cur = numbers[i];
+			int remain = target - cur;
+			if (visited.containsKey(remain)) {
+				ret[0] = visited.get(remain) + 1;
+				ret[1] = i + 1;
+				break;
+			} else {
+				visited.put(cur, i);
 			}
 		}
 		return ret;

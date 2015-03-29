@@ -5,6 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
 
+/**
+ * 找出所有长度为10的重复dna字串。这里其实就是从头扫描，记录之前出现过的所有的dna字串，
+ * 只是为了避免子串的比较，这里为每个子串生成了一个一一对应的hash值
+ * @author xiafan
+ *
+ */
 public class RepeatedDNASequence {
 	private static int[] charMaps = new int[26];
 	static { // A, C, G, and T,
