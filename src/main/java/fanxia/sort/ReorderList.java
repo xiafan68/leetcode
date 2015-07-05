@@ -2,7 +2,7 @@ package fanxia.sort;
 
 import java.util.Stack;
 
-import fanxia.structure.ListNode;
+import fanxia.list.ListNode;
 
 /**
  * Given a singly linked list L: L0→L1→…→Ln-1→Ln,

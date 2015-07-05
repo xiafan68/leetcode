@@ -3,7 +3,6 @@ package fanxia.array;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class TwoSum {
 	private class Pair {
